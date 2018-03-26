@@ -28,6 +28,8 @@ func imageNamed(_ name: String) -> UIImage {
  - Returns: An image.
  */
 func localizedString(_ key: String) -> String {
+  return NSLocalizedString(key, comment: "")
+  
   if let path = Bundle(for: BarcodeScannerViewController.self).resourcePath,
     let resourceBundle = Bundle(path: path + "/Localization.bundle") {
     return resourceBundle.localizedString(forKey: key, value: nil, table: "Localizable")
